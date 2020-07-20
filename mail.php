@@ -16,12 +16,12 @@
             <td>'.$name.'  '.$subject.'</td>
         </tr>
         <tr><td>Email: '.$email.'</td></tr>
-        <tr><td>phone: '.$subject.'</td></tr>
+        <tr><td>Subject: '.$subject.'</td></tr>
         <tr><td>Text: '.$text.'</td></tr>
         
     </table>';
 
-    if (@mail($to, $email, $message, $headers))
+    if (mail($to, $email, $message, $headers))
     {
         echo 'Your message has been sent.';
     }else{
